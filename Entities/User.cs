@@ -12,9 +12,12 @@ namespace Entities
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+        public ICollection<Agenda> myAgendas { get; set; }
 
-        //public Guid IdAgenda;
-
-        //public Guid IdOwnedAgenda;
+        public override bool Equals(Object o)
+        {
+            User user = o as User;
+            return user.Name.Equals(this.Name);
+        }
     }
 }

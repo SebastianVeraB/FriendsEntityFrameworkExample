@@ -15,5 +15,12 @@ namespace Entities
         //VIRTUAL in this case means that the navigable poperty can be Lazy Loaded  
         public virtual User Owner { get; set; }
         public virtual ICollection<User> Contacts { get; set; }
+
+        public override bool Equals(object o)
+        {
+            Agenda agenda = o as Agenda;
+            return agenda.Name.Equals(this.Name);
+        }
+
     }
 }

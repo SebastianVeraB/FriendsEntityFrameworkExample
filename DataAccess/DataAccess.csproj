@@ -51,9 +51,13 @@
   <ItemGroup>
     <Compile Include="AgendaDataAccess.cs" />
     <Compile Include="FriendContext.cs" />
-    <Compile Include="Migrations\201805240126458_InitialWithFluentApiGuidGen.cs" />
-    <Compile Include="Migrations\201805240126458_InitialWithFluentApiGuidGen.Designer.cs">
-      <DependentUpon>201805240126458_InitialWithFluentApiGuidGen.cs</DependentUpon>
+    <Compile Include="Migrations\201811031354568_initial.cs" />
+    <Compile Include="Migrations\201811031354568_initial.Designer.cs">
+      <DependentUpon>201811031354568_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811062236480_second.cs" />
+    <Compile Include="Migrations\201811062236480_second.Designer.cs">
+      <DependentUpon>201811062236480_second.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +77,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805240126458_InitialWithFluentApiGuidGen.resx">
-      <DependentUpon>201805240126458_InitialWithFluentApiGuidGen.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811031354568_initial.resx">
+      <DependentUpon>201811031354568_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811062236480_second.resx">
+      <DependentUpon>201811062236480_second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,6 +18,7 @@ namespace DataAccess
             {
                 context.Agendas.Add(entity);
                 context.SaveChanges();
+                
             }
         }
 
@@ -25,7 +26,18 @@ namespace DataAccess
         {
             using (FriendContext context = new FriendContext())
             {
+                context.Agendas.Attach(entity);
                 context.Agendas.Remove(entity);
+                context.SaveChanges();
+            }
+        }
+        public void DeleteUser(User entity)
+        {
+            using (FriendContext context = new FriendContext())
+            {
+                context.Users.Attach(entity);
+                context.Users.Remove(entity);
+                context.SaveChanges();
             }
         }
 
@@ -44,7 +56,15 @@ namespace DataAccess
         {
             using (FriendContext context = new FriendContext())
             {
-                return context.Agendas;
+                return context.Agendas.ToList();
+            }
+        }
+
+        public IEnumerable<User> GetAllUser()
+        {
+            using (FriendContext context = new FriendContext())
+            {
+                return context.Users.ToList();
             }
         }
 

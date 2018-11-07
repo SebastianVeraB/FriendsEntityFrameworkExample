@@ -25,6 +25,8 @@ namespace DataAccess
 
             modelBuilder.Entity<Agenda>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             modelBuilder.Entity<User>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Agenda>().HasMany(x => x.Contacts).WithMany();
+            
         }
     }
 }
